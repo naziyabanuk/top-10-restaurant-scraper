@@ -1,88 +1,99 @@
 # Top 10 Restaurant Scraper
 
-This Python script prompts the user to enter the name of a city, retrieves the top 10 restaurants in that city based on food ratings and reviews via a Google search, and saves the data in a JSON file for easy reference.
+This Python script automatically scrapes the **top 10 restaurants in a specified city** from Google Search using **Selenium with ChromeDriver**.
+
+It extracts:
+✅ **Restaurant Names**  
+✅ **Ratings**  
+✅ **Reviews Count**
+
+and stores them in a clean **JSON file (`restaurants.json`)** for analysis, reporting, or automation use.
 
 ---
 
-## Features
+## 🚀 Features
 
-✅ Prompts user for a **city name**  
-✅ Scrapes **top 10 restaurants, ratings, and reviews**  
-✅ Saves results in **`restaurants.json`**  
-✅ Well-commented and clean structure for learning and clarity
+- **Prompts the user** to enter the city name.
+- **Searches Google** for “top 10 restaurants in <city>”.
+- Clicks **“More places”** to expand the list.
+- **Scrapes names, ratings, and reviews dynamically**.
+- Outputs the data into a structured JSON file.
+- Uses **Selenium with WebDriver Manager** for smooth, automatic ChromeDriver handling.
 
 ---
 
-## Requirements
+## 🛠️ Requirements
 
 - Python 3.x
-- Required libraries:
-  - `requests`
-  - `beautifulsoup4`
-
-You can install the required libraries using:
-
-```bash
-pip install requests beautifulsoup4
-```
+- Google Chrome installed
+- Packages:
+    - selenium
+    - webdriver-manager
 
 ---
 
-## How to Run
+## ⚙️ Installation
 
-1️⃣ Clone the repository:
+1️⃣ Clone the repository or download the script:
 ```bash
 git clone https://github.com/naziyabanuk/top-10-restaurant-scraper.git
 cd top-10-restaurant-scraper
 ```
 
-2️⃣ Run the script:
+2️⃣ Install dependencies:
 ```bash
-python top_restaurants.py
+pip install selenium webdriver-manager
 ```
-
-3️⃣ Enter the **city name** when prompted (e.g., `Bangalore`, `Delhi`).
-
-4️⃣ After execution, check the generated `restaurants.json` file in your folder for the scraped data.
 
 ---
 
-## Example Output (`restaurants.json`)
+## ▶️ Usage
 
+Run the script:
+```bash
+python top_restaurants_scraper.py
+```
+
+Enter the **name of the city** when prompted, e.g.:
+```
+Enter the name of the city: Bangalore
+```
+
+After successful execution, the script will generate:
+```
+restaurants.json
+```
+containing the top 10 restaurants with their ratings and reviews.
+
+---
+
+Sample Output (`restaurants.json`)
 ```json
 {
     "Restaurant Name 1": {
-        "Rating": "4.5 star",
-        "Reviews": "1,250 reviews"
+        "Rating": "Rated 4.4 out of 5",
+        "Reviews": "2.4K"
     },
     "Restaurant Name 2": {
-        "Rating": "4.4 star",
-        "Reviews": "980 reviews"
+        "Rating": "Rated 4.2 out of 5",
+        "Reviews": "876"
     }
 }
 ```
 
 ---
 
-## Approach
 
-- Uses **requests** to send HTTP requests to Google Search with the query: `top 10 restaurants in <city>`.
-- Parses the returned HTML using **BeautifulSoup** to extract restaurant names, ratings, and reviews.
-- Stores the top 10 restaurant details in a JSON file with restaurant names as keys for organized storage.
-
----
-
-## Challenges
-
-- Google Search frequently changes its structure; scraping may break and require adjustments.
-- Handling dynamic CAPTCHA and rate limits on repeated requests is not handled here.
-- For production or stable use, consider using the **Google Custom Search API, Yelp API, or Zomato API** for structured restaurant data retrieval.
+Challenges:
+- Google changes its DOM structure frequently, so XPath may need updates over time.
+- For stable, production-grade scraping, consider using **official APIs (Google Places API, Yelp API)**.
 
 ---
 
-## Contact
+## 📧 Contact
 
-For any clarifications, please reach out:
-- **Naziya Banu K**
-- naziyabanu2001.k@gmail.com
-- linkedin.com/in/Naziya-Banu-K
+For any queries, please contact:
+
+Naziya Banu K 
+Email: [naziyabanu2001.k@gmail.com]  
+GitHub: [github.com/naziyabanuk](https://github.com/naziyabanuk)
