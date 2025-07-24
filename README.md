@@ -84,12 +84,11 @@ Sample Output (`restaurants.json`)
 ---
 
 
-Challenges Faced
-    Google frequently changes its DOM structure, so XPath may need updates over time.
-    Google may show “Are you a robot?” (reCAPTCHA) when automating search scraping.
-    A manual delay is added in the script (time.sleep) to give you time to verify the CAPTCHA manually before scraping proceeds.
-
-    For stable, production-grade scraping, using official APIs (Google Places API, Yelp API) is recommended.
+Challenges Faced:
+Google frequently changes its DOM structure, so XPath may need updates over time.
+Google may show “Are you a robot?” (reCAPTCHA) when automating search scraping.
+A manual delay is added in the script (time.sleep) to give you time to verify the CAPTCHA manually before scraping proceeds.
+For stable, production-grade scraping, using official APIs (Google Places API, Yelp API) is recommended.
 
 ---
 
